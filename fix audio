@@ -1,0 +1,81 @@
+          * DEFINE SOUNDS
+
+          */
+
+         $.mbAudio.sounds = {
+
+-
+
+             backgroundSprite: {
+
+                 id    : "backgroundSprite",
+
+                 ogg   : "sounds/bgndsSprite.ogg",
+
+@@ -71,18 +70,13 @@
+
+             }
+
+         };
+
+ 
+
+-
+
+         function audioIsReady() {
+
+-
+
+             setTimeout(function () {
+
+                 $('#buttons').fadeIn();
+
+                 $("#loading").hide();
+
+-
+
+                 if (isStandAlone || !isDevice)
+
+                     $.mbAudio.play('backgroundSprite', "level2");
+
+-
+
+             }, 3000);
+
+-
+
+         }
+
+ 
+
+         $(document).on("initAudio", function () {
+
+@@ -90,7 +84,6 @@
+
+             //otherwise sound is initialized on the first tap loosing time and UX
+
+             $.mbAudio.pause('effectSprite', audioIsReady);
+
+ 
+
+-
+
+             $('#start').hide();
+
+             $("#loading").show();
+
+         });
+
+@@ -112,7 +105,6 @@
+
+             /*
+
+                     button.disabled{
+
+                         opacity:.3;
+
+-
+
+                     }
+
+             */
